@@ -1,6 +1,3 @@
-print('OK')
-print('Well')
-print('Good')
-for i in range(10):
-    print(i + 1)
-
+n = int(input())
+for i in range(n):
+    print(i)
