@@ -33,7 +33,7 @@ def find_root(e: Expr, d: Expr, l: float, r: float):
 def find_roots(e: Expr, l: float, r: float) -> list[float]:
     global delta
     try:
-        s = sorted(filter(lambda y: abs(y.imag) <
+        s = sorted(i.real for i in filter(lambda y: abs(y.imag) <
                    delta, (complex(x.evalf()) for x in solve(e))))
     except:
         s = []

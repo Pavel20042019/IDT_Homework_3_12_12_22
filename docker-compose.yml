@@ -1,0 +1,11 @@
+services:
+    bot:
+        image: ubuntu
+        volumes:
+          - .:/home
+        command: bash -c "apt update &&
+            apt install -y python3 &&
+            apt install -y python3-pip &&
+            pip install sympy &&
+            pip install python-telegram-bot --pre &&
+            python3 /home/bot.py"
